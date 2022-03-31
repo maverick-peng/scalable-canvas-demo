@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+  <style>
+    body {
+      margin: 0;
+      box-sizing: border-box;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: rgb(253, 223, 168);
+    }
+
+    canvas {
+      border: 2px solid #aaa;
+      box-sizing: border-box;
+    }
+
+    button {
+      margin: 15px;
+      width: 120px;
+      height: 60px;
+      background-color: orange;
+      color: #fff;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: rgb(177, 115, 0);
+    }
+  </style>
+</head>
+
+<body>
+  <canvas>
+  </canvas>
+  <img style="display: none;" src="./src/assets/2F-閱覽座位.png">
+  <button id="resetBtn">Reset</button>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
