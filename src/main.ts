@@ -1,4 +1,5 @@
 import './style.css'
+import imgUrl from './assets/2F-閱覽座位.png'
 
 /**
  * Extend CanvasRenderingContext2D class so that it could draw rectangle with rounded corners
@@ -63,17 +64,15 @@ class Frame {
 
     this.image = new Image();
     this.image.classList.add('auto');
-    this.image.src = './src/assets/2F-閱覽座位.png';
+    this.image.src = this.imageUrl;
     
     this.image.onload = () => {
 
       this.ctx.drawImage(this.image, 0, 0, 1920, 2000, 0, 0, 1920, 2000);
+      this.render();
     }
   }
 
-  setImage() {
-  
-  }
 
   render() {
     // Clear context
@@ -162,8 +161,7 @@ btns.push(new Button(149, 234, 61, 58, 8, '#ab0'));
 btns.push(new Button(213, 234, 57, 58, 8, '#abf'));
 
 
-let frame = new Frame(canvas, 500, 500, 2.0, 0.5, btns, './src/assets/2F-閱覽座位.png');
-frame.render();
+let frame = new Frame(canvas, 500, 500, 2.0, 0.5, btns, imgUrl);
 frame.listenWheel();
 
 // Reset Button
@@ -174,7 +172,6 @@ resetBtn?.addEventListener('click', () => {
 
 // Resize window
 window.addEventListener('resize', () => {
-  frame = new Frame(canvas, window.innerWidth * .7, 500, 2, 0.5, btns, './src/assets/2F-閱覽座位.png');
-  frame.render();
+  frame = new Frame(canvas, window.innerWidth * .7, 500, 2, 0.5, btns, imgUrl);
   frame.listenWheel();
 })
