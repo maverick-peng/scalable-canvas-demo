@@ -157,9 +157,9 @@ const btns = new Array<Button>();
 // for (let i = 0; i < 20; i++) {
 //   btns.push(new Button(50 + i * 70, 100, 50, 50, 10));
 // }
-btns.push(new Button(89, 234, 58, 58, 8));
-btns.push(new Button(149, 234, 61, 58, 8));
-btns.push(new Button(213, 234, 57, 58, 8));
+btns.push(new Button(89, 234, 58, 58, 8, '#ab8'));
+btns.push(new Button(149, 234, 61, 58, 8, '#ab0'));
+btns.push(new Button(213, 234, 57, 58, 8, '#abf'));
 
 
 let frame = new Frame(canvas, 500, 500, 2.0, 0.5, btns, './src/assets/2F-閱覽座位.png');
